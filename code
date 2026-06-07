@@ -1,0 +1,30 @@
+import java.util.*;
+class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        long n = sc.nextInt();
+        if(n < 0)
+        {
+            return;
+        }
+        long t = n;
+        long rev = 0;
+        while(t!=0)
+        {
+            long temp = t%10;
+            rev = rev*10+temp;
+            t=t/10;
+        }
+        System.out.println(rev);
+        if(n==rev)
+        {
+            System.out.println("Palindrome");
+        }
+        else
+        {
+            System.out.println("Not a Palindrome");
+        }
+    }
+}
